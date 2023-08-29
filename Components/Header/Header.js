@@ -14,7 +14,6 @@ import { usePathname } from 'next/navigation'
 function Header({ contactData }) {
   const pathname = usePathname()
 
-  console.log(pathname)
   const searchTerm = pathname;
   const [location, cuisine] = searchTerm.split('/').slice(1); // Extract "paihia" and "thai"
 

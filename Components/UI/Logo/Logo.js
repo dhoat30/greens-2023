@@ -22,13 +22,11 @@ export default Logo
 
 const Container = styled.div`
     position: relative; 
-    width: 150px; 
+    width: 120px; 
     padding-bottom: 35%; 
-   
 `
 const ImageStyle = styled(Image)`
 object-fit: cover;
 margin: 0 auto 0 0;
-
 display: block ;
 `

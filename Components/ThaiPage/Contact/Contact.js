@@ -3,7 +3,6 @@ import React, { useContext } from 'react'
 import FormSection from './FormSection/FormSection'
 import styled from 'styled-components'
 function Contact({ contactInfoData }) {
-    console.log(contactInfoData)
 
     return (
         <Container>

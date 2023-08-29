@@ -6,6 +6,7 @@ import CloseIcon from '../../UI/Icons/CloseIcon'
 import LoadingContext from '../../../store/loading-context'
 
 function Navbar(props) {
+
   const [mobileMenuShow, setMobileMenuShow] = useState(false)
   const [hamburgerIconShow, setHamburgerIconShow] = useState(true)
 
@@ -75,7 +76,7 @@ path {
 }
 `
 const CloseIconStyle = styled(CloseIcon)`
-width: 25px; 
+width: 25px !important; 
  
 color: var(--green);
 position: absolute;

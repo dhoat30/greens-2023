@@ -86,7 +86,7 @@ async function page() {
   });
   let contactInfo = await contactInfoData.json();
   contactInfo = contactInfo.filter(
-    (item) => item.slug === "greens-thai-paihia"
+    (item) => item.slug === "greens-thai-russell"
   );
 
   return (

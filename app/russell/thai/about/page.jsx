@@ -10,7 +10,7 @@ async function page() {
   let aboutPageData;
   if (indianPages.length > 0) {
     aboutPageData = indianPages.filter((item) =>
-      item.title.rendered.includes("About Us Thai Paihia")
+      item.title.rendered.includes("About Us Russell Thai")
     );
   }
 

@@ -4,8 +4,7 @@ import styled from "styled-components";
 import PrimaryButton from "../UI/Button/PrimaryButton";
 import Image from "next/image";
 import CloseIcon from "@/Components/UI/Icons/CloseIcon";
-import AnchorButton from "@/Components/UI/Button/AnchorButton";
-
+import Link from "next/link";
 function EntryPagePopUp({
   firstBtnTitle,
   secondBtnTitle,
@@ -29,10 +28,10 @@ function EntryPagePopUp({
 
           <h2> Choose Cuisine</h2>
           <div className="button-wrapper">
-            <AnchorButton background="true" variant="indian" link={indianLink}>
+            <AnchorButton background="true" variant="indian" href={indianLink}>
               {firstBtnTitle}
             </AnchorButton>
-            <AnchorButton background="true" variant="thai" link={thaiLink}>
+            <AnchorButton background="true" variant="thai" href={thaiLink}>
               {secondBtnTitle}
             </AnchorButton>
           </div>
@@ -108,9 +107,38 @@ const Container = styled.div`
       @media (max-width: 500px) {
         flex-direction: column;
       }
-      a {
-        width: 100%;
-      }
     }
   }
+`;
+
+const AnchorButton = styled(Link)`
+
+        width: 100%;
+        display: inline-block;
+    text-align: center;
+    text-decoration: none; 
+    letter-spacing: var(--letterSpacing);
+    border: ${(props) =>
+      props.variant === "indian" ? "var(--primaryRed)" : "var(--green)"}; 
+    padding: 10px 25px 10px 25px;
+    font-size: 0.9rem;
+    outline: none;
+    font-family: var(--poppins);
+    margin:${(props) => props.margin};
+
+    cursor: pointer;
+    background: ${(props) =>
+      props.variant === "indian" ? "var(--primaryRed)" : "var(--green)"}; 
+    color:white; 
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        background: ${(props) =>
+          props.variant === "indian" ? "var(--hoverRed)" : "var(--hoverGreen)"};
+        /* color: ${(props) =>
+          !props.background ? "white" : "var(--hoverGreen)"}; */
+        border: ${(props) =>
+          props.variant === "indian" ? "var(--hoverRed)" : "var(--green)"}
+        text-decoration: none;
+    }
+      
 `;

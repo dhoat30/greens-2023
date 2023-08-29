@@ -37,4 +37,5 @@ const Button = styled.button`
         /* color: ${props => !props.background ? "white" : "var(--hoverGreen)"}; */
         border: ${props => props.variant === "indian" ? "var(--hoverRed)" : "var(--green)"}
         text-decoration: none;
+    }
 `
