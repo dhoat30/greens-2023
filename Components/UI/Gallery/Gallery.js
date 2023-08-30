@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { SRLWrapper } from "simple-react-lightbox";
 import Image from 'next/image'

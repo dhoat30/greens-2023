@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import AnchorLink from '../AnchorLink/AnchorLink'
 function MobileFixedButtons(props) {
     return (
-        <Container>
+        <Container className={props.className}>
             <AnchorLinkStyle icon="false" link={props.orderOnlineLink} background={true} targetBlank={true}> Order Online </AnchorLinkStyle>
             <AnchorBackground icon="false" link={`tel: ${props.phoneNumber}`} background={true}> Call Us </AnchorBackground>
 

@@ -1,9 +1,9 @@
 import React from "react";
-import MenuPage from "@/Components/ThaiPage/MenuPage/MenuPage";
+import MenuPage from "@/Components/IndianPage/IndianMenuPage/MenuPage";
 async function page() {
   //menu images
   const menuImages = await fetch(
-    `${process.env.url}/wp-json/wp/v2/menu_images?menu-images-category-slug=thai-russell`,
+    `${process.env.url}/wp-json/wp/v2/menu_images?menu-images-category-slug=indian-paihia`,
     {
       next: { revalidate: 86400 },
     }

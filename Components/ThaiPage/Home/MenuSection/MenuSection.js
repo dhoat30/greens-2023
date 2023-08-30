@@ -28,7 +28,6 @@ function MenuSection({ favouriteMenuData, menuImagesData }) {
   // const thaiImage = menuImagesData.filter(item => item.title.rendered.includes('Thai'))
   // const indianImage = menuImagesData.filter(item => item.title.rendered.includes('Indian'))
   let firstImage, secondImage
-  // console.log(pathname)
   // if (pathname.includes('russell')) {
   //   firstImage = thaiImage[0].acf.menu_image.url
   //   secondImage = indianImage[1].acf.menu_image.url

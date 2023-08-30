@@ -66,7 +66,7 @@ const IndianFooter = ({ contactData }) => {
       <Container>
         <Content className="row-container">
           <ContactBox>
-            <ColumnTitle color="var(--primaryRed)">Contact Us</ColumnTitle>
+            <ColumnTitle color="var(--onSurface)">Contact Us</ColumnTitle>
             <Items>
               <Anchor href={`tel: ${urlData[0].phone}`}>
                 <Phone />
@@ -111,7 +111,7 @@ const IndianFooter = ({ contactData }) => {
           </LogoContainer>
 
           <OpeningHoursContainer>
-            <ColumnTitle color="var(--primaryRed)">Opening Hours</ColumnTitle>
+            <ColumnTitle color="var(--onSurface)">Opening Hours</ColumnTitle>
             <Items>
               {urlData[0].openingHours.map((item, index) => {
                 return (
@@ -126,6 +126,7 @@ const IndianFooter = ({ contactData }) => {
         </Content>
         <Copyright copyright={urlData[0].copyright} />
         <MobileFixedButtons
+          className="mobile-fixed-btn-wrapper"
           orderOnlineLink={urlData[0].orderOnlineLink}
           phoneNumber={urlData[0].phone}
         />
@@ -141,22 +142,27 @@ const IndianFooter = ({ contactData }) => {
 const Container = styled.section`
   background: #fff8f6;
   padding: 50px 0 0 0;
+  .mobile-fixed-btn-wrapper {
+    a {
+      color: white !important;
+    }
+  }
   svg {
-    color: var(--primaryRed);
-    fill: var(--primaryRed);
+    color: var(--onSurface);
+    fill: var(--onSurface);
 
     circle {
-      fill: var(--primaryRed);
+      fill: var(--onSurface);
     }
   }
   span {
-    color: var(--primaryRed);
+    color: var(--onSurface);
   }
   a {
-    color: var(--primaryRed);
+    color: var(--onSurface);
   }
   div {
-    color: var(--primaryRed);
+    color: var(--onSurface);
   }
 `;
 
@@ -202,14 +208,14 @@ const SocialContainer = styled.div`
     width: 50px;
     &:hover {
       circle {
-        fill: var(--primaryRed);
+        fill: var(--onSurface);
       }
     }
   }
 `;
 const OpeningHoursItem = styled.div`
   margin-top: 5px;
-  color: var(--PrimaryRed);
+  color: var(--onSurface);
 `;
 const Anchor = styled.a`
   display: flex;
@@ -217,14 +223,14 @@ const Anchor = styled.a`
   font-size: 1rem;
   font-family: var(--poppins);
   font-weight: 400;
-  color: var(--primaryRed);
+  color: var(--onSurface);
   margin-bottom: 10px;
   &:hover {
-    color: var(--primaryRed);
+    color: var(--onSurface);
     cursor: pointer;
     svg {
       circle {
-        fill: var(--primaryRed);
+        fill: var(--onSurface);
       }
     }
   }

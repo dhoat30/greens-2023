@@ -18,9 +18,11 @@ function ChefSpecial({ favouriteMenuData, orderOnlineLink }) {
   });
   return (
     <>
-      <Container>
+      <Container id="chef-choice">
         <div className="row-container">
-          <h2 className="section-title-indian title-border"> Chef's Special</h2>
+          <h2 className="section-title-indian title-border">
+            Chef&apos;s Special
+          </h2>
           <ul className="flex-wrapper">
             {cardItem}
             <a

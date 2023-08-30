@@ -1,9 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Hero from "../../../UI/Hero/Hero";
 import styled from "styled-components";
-import axios from "axios";
 import Image from "next/image";
 import SectionTitle from "@/Components/UI/Titles/SectionTitle";
 import Link from "next/link";

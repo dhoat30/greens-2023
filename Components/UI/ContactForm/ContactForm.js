@@ -168,7 +168,7 @@ function ContactForm({ emailTo, emailRouteUrl, cancelPass, dropShadow, className
                         label="Message"
                         value={enteredMessage}
                         onChange={(e) => setEnteredMessage(e.target.value)}
-                        placeholder="Message"
+                        defaultValue="Message"
                     />
                 </InputContainer>
 

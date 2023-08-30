@@ -2,14 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 function Input(props) {
     // const inputClasses = props.isInvalid ? `invalid` : `card-border-radius`
+    console.log(props.placeholder)
     return (
         <React.Fragment >
             {props.type === 'textarea' ?
                 <TextAreaStyle
-                    placeholder={props.placeholder}
+                    defaultValue={props.placeholder}
                     value={props.value}
                     onChange={props.inputChange}
-                > </TextAreaStyle>
+                />
                 :
                 <InputStyle
                     min={props.min}

@@ -23,22 +23,23 @@ function IndianHeader({ contactData }) {
     },
     {
       id: 121546,
-      url: `${rootUrl}#menu`,
+      url: `${rootUrl}/menu`,
       label: "Menu",
+    },
+    {
+      id: 121548,
+      url: `${rootUrl}#chef-choice`,
+      label: "Chef's Choice",
     },
     {
       id: 121547,
       url: `${rootUrl}#gallery`,
       label: "Gallery",
     },
-    {
-      id: 121548,
-      url: `${rootUrl}#about`,
-      label: "About",
-    },
+
     {
       id: 121549,
-      url: `${rootUrl}#contact`,
+      url: `${rootUrl}/contact`,
       label: "Contact",
     },
   ];
@@ -96,9 +97,9 @@ const DesktopNavbar = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    max-width: 95%;
-    margin: 0 auto;
-    padding: 8px 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
     .button-wrapper {
       display: flex;
       gap: 16px;

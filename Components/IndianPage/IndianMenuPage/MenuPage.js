@@ -8,6 +8,9 @@ import MenuCard from './MenuCard'
 
 function MenuPage({ menuData }) {
 
+
+
+
     const menuCard = menuData.map(item => {
         return (
             <React.Fragment key={item.id}>
@@ -20,7 +23,7 @@ function MenuPage({ menuData }) {
     return (
         <Container className="row-container">
 
-            <SectionTitle> Select Menu</SectionTitle>
+            <h1 class=" section-title-indian"> Select Menu</h1>
             <Flex>
                 {
                     menuCard
