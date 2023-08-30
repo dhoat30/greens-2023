@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import HamburgerIcon from '../../UI/Icons/HamburgerIcon'
 import CloseIcon from '../../UI/Icons/CloseIcon'
 import LoadingContext from '../../../store/loading-context'
+import Overlay from '@/Components/UI/Overlay/Overlay'
 
 function Navbar(props) {
 
@@ -36,6 +37,7 @@ function Navbar(props) {
       </DesktopContainer>
 
       <MobileContainer>
+        <Overlay />
         {Icon}
         {mobileMenuShow ? <Menu
           closeClick={closeClickHandler}
@@ -68,9 +70,8 @@ display: none;
 const HamburgerIconStyle = styled(HamburgerIcon)`
 width: 35px; 
 color: var(--green);
-position: absolute;
-top: 20px;
-left: 20px;
+
+
 path { 
   fill: var(--green);
 }
@@ -79,7 +80,7 @@ const CloseIconStyle = styled(CloseIcon)`
 width: 25px !important; 
  
 color: var(--green);
-position: absolute;
+/* position: absolute; */
 top: 20px;
 left: 20px;
 path { 

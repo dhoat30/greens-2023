@@ -39,7 +39,7 @@ const Container = styled.ul`
         background: var(--lightGreen); 
         width: 90vw;
        left: 20px;
-       top: 50px; 
+       top: 100px; 
        li{ 
         border-top: 1px solid var(--green);
         a{ 

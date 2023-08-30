@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Navbar from "../Header/Navbar/Navbar";
 import PrimaryButton from "../UI/Button/PrimaryButton";
+import ChangeLocation from "../Header/ChangeLocation/ChangeLocation";
 
 function IndianHeader({ contactData }) {
   // get current url
@@ -14,6 +15,7 @@ function IndianHeader({ contactData }) {
   const [location, cuisine] = pathname.split("/").slice(1); // Extract "paihia" and "thai"
   // get root url to use for logo link
   const rootUrl = `/${location}/${cuisine}`;
+  const currentLocation = `${cuisine} ${location}`;
 
   const menuArr = [
     {
@@ -44,42 +46,45 @@ function IndianHeader({ contactData }) {
     },
   ];
   return (
-    <HeaderContainer>
-      <DesktopNavbar className="row-container">
-        <Link href={rootUrl}>
-          <Logo
-            className="desktopLogo"
-            logoData={contactData.acf.logo}
-            header={true}
-          />
-        </Link>
-        <Navbar firstMenuArray={menuArr} />
-        <div className="button-wrapper">
-          <Link
-            className="order-online-btn primary-red-btn"
-            href={contactData.acf.order_online_link}
-          >
-            Order Online
+    <>
+      <ChangeLocation variant="indian" currentLocation={currentLocation} />
+      <HeaderContainer>
+        <DesktopNavbar className="row-container">
+          <Link href={rootUrl}>
+            <Logo
+              className="desktopLogo"
+              logoData={contactData.acf.logo}
+              header={true}
+            />
           </Link>
-          <Link
-            className="book-table-btn seconday-red-btn"
-            href={`${rootUrl}#book-table`}
-          >
-            Book a Table
+          <Navbar firstMenuArray={menuArr} />
+          <div className="button-wrapper">
+            <Link
+              className="order-online-btn primary-red-btn"
+              href={contactData.acf.order_online_link}
+            >
+              Order Online
+            </Link>
+            <Link
+              className="book-table-btn seconday-red-btn"
+              href={`${rootUrl}#book-table`}
+            >
+              Book a Table
+            </Link>
+          </div>
+        </DesktopNavbar>
+        <MobileNavbar className="row-container">
+          <Navbar firstMenuArray={menuArr} />
+          <Link href={rootUrl}>
+            <Logo
+              className="desktopLogo"
+              logoData={contactData.acf.logo}
+              header={true}
+            />{" "}
           </Link>
-        </div>
-      </DesktopNavbar>
-      <MobileNavbar className="row-container">
-        <Navbar firstMenuArray={menuArr} />
-        <Link href={rootUrl}>
-          <Logo
-            className="desktopLogo"
-            logoData={contactData.acf.logo}
-            header={true}
-          />{" "}
-        </Link>
-      </MobileNavbar>
-    </HeaderContainer>
+        </MobileNavbar>
+      </HeaderContainer>
+    </>
   );
 }
 
@@ -142,6 +147,7 @@ const MobileNavbar = styled.div`
       border: 1px solid var(--primaryRed);
       border-top: none;
       padding-left: 0;
+      top: 50px;
       li {
         border-top: 1px solid var(--primaryRed);
         a {

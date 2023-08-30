@@ -7,6 +7,7 @@ import Link from 'next/link'
 import ContactInfoContext from '../../store/contact-info-context'
 import AnchorLink from '../UI/AnchorLink/AnchorLink'
 import { usePathname } from 'next/navigation'
+import ChangeLocation from './ChangeLocation/ChangeLocation'
 
 // menu array
 
@@ -16,6 +17,7 @@ function Header({ contactData }) {
 
   const searchTerm = pathname;
   const [location, cuisine] = searchTerm.split('/').slice(1); // Extract "paihia" and "thai"
+  const currentLocation = `${cuisine} ${location}`;
 
   const filteredItems = contactData.map(item => {
     if (item.slug.includes(location) && item.slug.includes(cuisine)) {
@@ -85,23 +87,27 @@ function Header({ contactData }) {
     }
   })
   return (
-    <Container className='header'>
-      <DesktopNavbar className="row-container">
-        <Navbar firstMenuArray={firstPartMenu} />
-        <Link href={menuArray[0].url} passHref legacyBehavior>
-          <LinkStyle><Logo logoData={urlData[0].logo} header={true} contWidth="150px" /></LinkStyle>
-        </Link>
-        <Navbar firstMenuArray={secondPartMenu} />
-      </DesktopNavbar>
+    <>
+      <ChangeLocation variant="thai" currentLocation={currentLocation} />
+      <Container className='header'>
+        <DesktopNavbar className="row-container">
+          <Navbar firstMenuArray={firstPartMenu} />
+          <Link href={menuArray[0].url} passHref legacyBehavior>
+            <LinkStyle><Logo logoData={urlData[0].logo} header={true} contWidth="150px" /></LinkStyle>
+          </Link>
+          <Navbar firstMenuArray={secondPartMenu} />
+        </DesktopNavbar>
 
-      <MobileNavbar className="row-container">
+        <MobileNavbar className="row-container">
 
-        <Navbar firstMenuArray={mobileMenuArrayData} />
-        <Link href={menuArray[0].url} passHref legacyBehavior>
-          <LinkStyle><Logo logoData={urlData[0].logo} header={true} contWidth="100px" /></LinkStyle>
-        </Link>
-      </MobileNavbar>
-    </Container>
+          <Navbar firstMenuArray={mobileMenuArrayData} />
+          <Link href={menuArray[0].url} passHref legacyBehavior>
+            <LinkStyle><Logo logoData={urlData[0].logo} header={true} contWidth="100px" /></LinkStyle>
+          </Link>
+        </MobileNavbar>
+      </Container>
+    </>
+
   )
 }
 
