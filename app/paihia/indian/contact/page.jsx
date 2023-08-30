@@ -5,7 +5,7 @@ async function page() {
   let contactInfoData = await fetch(
     `${process.env.url}/wp-json/wp/v2/info?info_tag=1428`,
     {
-      next: { revalidate: 86400 },
+      next: { revalidate: 60 },
     }
   );
   let contactInfo = await contactInfoData.json();

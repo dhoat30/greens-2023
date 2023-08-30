@@ -5,7 +5,7 @@ async function page() {
   const menuImages = await fetch(
     `${process.env.url}/wp-json/wp/v2/menu_images?menu-images-category-slug=indian-paihia`,
     {
-      next: { revalidate: 86400 },
+      next: { revalidate: 60 },
     }
   );
   const menuData = await menuImages.json();

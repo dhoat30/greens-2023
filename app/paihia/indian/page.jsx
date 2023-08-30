@@ -6,7 +6,7 @@ async function page() {
   const response = await fetch(
     `${process.env.url}/wp-json/wp/v2/slider?slider=1427`,
     {
-      next: { revalidate: 86400 },
+      next: { revalidate: 60 },
     }
   );
   const sliderData = await response.json();
@@ -15,7 +15,7 @@ async function page() {
   const favouriteMenu = await fetch(
     `${process.env.url}/wp-json/wp/v2/menu?menu-category-slug=indian-favourite`,
     {
-      next: { revalidate: 86400 },
+      next: { revalidate: 60 },
     }
   );
   const favouriteMenuData = await favouriteMenu.json();
@@ -24,7 +24,7 @@ async function page() {
   let contactInfoData = await fetch(
     `${process.env.url}/wp-json/wp/v2/info?info_tag=1428`,
     {
-      next: { revalidate: 86400 },
+      next: { revalidate: 60 },
     }
   );
   let contactInfo = await contactInfoData.json();
@@ -33,14 +33,14 @@ async function page() {
   const testimonial = await fetch(
     `${process.env.url}/wp-json/wp/v2/testimonial?testimonial-category-slug=indian-paihia`,
     {
-      next: { revalidate: 86400 },
+      next: { revalidate: 60 },
     }
   );
   const testimonialData = await testimonial.json();
 
   // gallery
   const gallery = await fetch(`${process.env.url}/wp-json/wp/v2/gallery`, {
-    next: { revalidate: 86400 },
+    next: { revalidate: 60 },
   });
   const indianGallery = await gallery.json();
   let galleryData;
@@ -53,7 +53,7 @@ async function page() {
   const pages = await fetch(
     `${process.env.url}/wp-json/wp/v2/pages?slug=brands-section`,
     {
-      next: { revalidate: 86400 },
+      next: { revalidate: 60 },
     }
   );
   const brandsData = await pages.json();

@@ -4,7 +4,7 @@ import AboutPage from "@/Components/ThaiPage/AboutPage/AboutPage";
 async function page() {
   // chef
   const pages = await fetch(`${process.env.url}/wp-json/wp/v2/pages`, {
-    next: { revalidate: 86400 },
+    next: { revalidate: 60 },
   });
   const indianPages = await pages.json();
   let aboutPageData;

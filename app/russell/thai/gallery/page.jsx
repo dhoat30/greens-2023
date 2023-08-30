@@ -3,7 +3,7 @@ import GalleryPage from "@/Components/ThaiPage/GalleryPage/GalleryPage";
 async function page() {
   // chef
   const gallery = await fetch(`${process.env.url}/wp-json/wp/v2/gallery`, {
-    next: { revalidate: 86400 },
+    next: { revalidate: 60 },
   });
   const indianGallery = await gallery.json();
   let galleryData;
