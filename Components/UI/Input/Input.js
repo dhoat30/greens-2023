@@ -11,6 +11,7 @@ function Input(props) {
                     value={props.value}
                     onChange={props.inputChange}
                 />
+
                 :
                 <InputStyle
                     min={props.min}
