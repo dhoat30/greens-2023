@@ -8,11 +8,11 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Greens Paihia - Thai: Authentic Thai Dining in Paihia",
+  title: "Greens Thai Restaurant – Paihia | Delivery | Gluten Free Options",
   description:
     "Indulge in the vibrant tastes of Thailand at Greens Paihia - Thai. Nestled in Paihia, we offer genuine Thai cuisine, combining tradition with New Zealand's fresh ingredients. A must-visit dining experience!",
   openGraph: {
-    title: "Greens Paihia - Thai: Authentic Thai Dining in Paihia",
+    title: "Greens Thai Restaurant – Paihia | Delivery | Gluten Free Options",
     description:
       "Indulge in the vibrant tastes of Thailand at Greens Paihia - Thai. Nestled in Paihia, we offer genuine Thai cuisine, combining tradition with New Zealand's fresh ingredients. A must-visit dining experience!",
     images: ["/thai-logo-paihia.webp"],

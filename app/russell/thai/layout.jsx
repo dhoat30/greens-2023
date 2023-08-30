@@ -8,7 +8,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Greens Paihia - Thai: Authentic Thai Dining in Russell",
+  title: "Greens Russell - Thai: Authentic Thai Dining in Russell",
   description:
     "Indulge in the vibrant tastes of Thailand at Greens Russell - Thai. Nestled in Russell, we offer genuine Thai cuisine, combining tradition with New Zealand's fresh ingredients. A must-visit dining experience!",
   openGraph: {

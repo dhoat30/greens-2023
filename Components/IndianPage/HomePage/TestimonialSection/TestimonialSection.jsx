@@ -39,14 +39,24 @@ const Container = styled.section`
   .flex-wrapper {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     gap: 40px;
     height: 500px;
+    @media (max-width: 1000px) {
+      height: 600px;
+      gap: 0;
+    }
     .title-section {
-      width: 50%;
+      width: calc(50% - 80px);
       background: var(--primaryRed);
       display: flex;
+
       align-items: center;
       padding: 0 0 0 160px;
+      @media (max-width: 1000px) {
+        width: 100%;
+        padding: 0 8px;
+      }
       h3 {
         text-align: left;
         color: white;
@@ -56,10 +66,14 @@ const Container = styled.section`
 `;
 const TestimonialBox = styled.div`
   margin: 0 auto;
-  width: 50%;
+  width: calc(50% - 80px);
   padding: 0 160px 0 0;
   display: flex;
   align-items: center;
+  @media (max-width: 1000px) {
+    width: 100%;
+    padding: 0 8px;
+  }
 `;
 const CarouselsStyle = styled(Carousels)`
   margin-top: 50px;

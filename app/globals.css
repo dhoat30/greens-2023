@@ -288,6 +288,11 @@ input[type="time"]:focus::before {
   color: var(--onSurface);
   text-align: center;
 }
+@media (max-width: 1000px) {
+  .section-title-indian {
+    font-size: 40px;
+  }
+}
 .card-title {
   font-size: 22px;
   font-weight: 500;
