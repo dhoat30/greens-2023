@@ -25,8 +25,12 @@ const changeLocationArr = [
 function ChangeLocation({ variant, currentLocation }) {
   const { push } = useRouter();
 
-  const values = changeLocationArr.map((item) => {
-    return <option value={item.url}>{item.label}</option>;
+  const values = changeLocationArr.map((item, index) => {
+    return (
+      <option key={index} value={item.url}>
+        {item.label}
+      </option>
+    );
   });
 
   const changeHandler = (e) => {

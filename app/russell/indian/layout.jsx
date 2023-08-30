@@ -22,7 +22,10 @@ export const metadata = {
 export default async function RootLayout({ children }) {
   // indian russell information post has this tag id 1422
   let contactInfoData = await fetch(
-    `${process.env.url}/wp-json/wp/v2/info?info_tag=1422`
+    `${process.env.url}/wp-json/wp/v2/info?info_tag=1422`,
+    {
+      next: { revalidate: 60 },
+    }
   );
   let contactInfo = await contactInfoData.json();
   return (

@@ -20,7 +20,9 @@ export const metadata = {
 };
 
 export default async function RootLayout({ children }) {
-  let contactInfoData = await fetch(`${process.env.url}/wp-json/wp/v2/info`);
+  let contactInfoData = await fetch(`${process.env.url}/wp-json/wp/v2/info`, {
+    next: { revalidate: 60 },
+  });
   let contactInfo = await contactInfoData.json();
 
   return (
