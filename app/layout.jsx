@@ -9,16 +9,19 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Greens Indian Restaurant – Paihia | Byo | Gluten Free Options",
+  title:
+    "Choose Your Preferred Greens Indian or Thai Restaurant Location | Paihia & Russells",
   description:
-    "Indulge in the vibrant tastes of India at Greens Paihia. Nestled in Paihia, we offer genuine India cuisine, combining tradition with New Zealand's fresh ingredients. A must-visit dining experience!",
+    "Select your desired Greens Indian or Thai Restaurant location in Paihia or Russell, New Zealand. Explore exquisite Indian and Thai cuisine in the heart of the Bay of Islands. Click to choose and discover authentic flavors!",
   openGraph: {
-    title: "Greens Indian Restaurant – Paihia | Byo | Gluten Free Options",
+    title:
+      "Choose Your Preferred Greens Indian or Thai Restaurant Location | Paihia & Russells",
     description:
-      "Indulge in the vibrant tastes of India at Greens Paihia. Nestled in Paihia, we offer genuine India cuisine, combining tradition with New Zealand's fresh ingredients. A must-visit dining experience!",
+      "Select your desired Greens Indian or Thai Restaurant location in Paihia or Russell, New Zealand. Explore exquisite Indian and Thai cuisine in the heart of the Bay of Islands. Click to choose and discover authentic flavors!",
     images: ["/Greens-Logo.png"],
   },
 };
+
 export default async function RootLayout({ children }) {
   return (
     <html lang="en">
