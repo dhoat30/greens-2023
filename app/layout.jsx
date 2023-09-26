@@ -2,6 +2,8 @@ import "./globals.css";
 import { Poppins } from "next/font/google";
 import StyledComponentsRegistry from "./registery";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Script from "next/script";
+import Head from "next/head";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -25,6 +27,16 @@ export const metadata = {
 export default async function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* google tag  */}
+
+        <Script id="google-analytics-tag" strategy="afterInteractive">
+          {`(window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XKMM7NJFPH');)`}
+        </Script>
+      </head>
       <body className={poppins.className}>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
