@@ -13,6 +13,8 @@ import Map from "../UI/Icons/Map";
 import Phone from "../UI/Icons/Phone";
 import Email from "../UI/Icons/Email";
 import { usePathname } from 'next/navigation'
+import Link from "next/link";
+import Image from "next/image";
 
 const Footer = ({ contactData }) => {
   const pathname = usePathname()
@@ -95,11 +97,10 @@ const Footer = ({ contactData }) => {
           </ContactBox>
 
           <LogoContainer>
-            <Logo
-              logoData={urlData[0].logo}
-              contWidth="250px"
-              mobileWidth="220px"
+            <Image src={urlData[0].logo.url} alt="logo" width={172} height={60}
+              style={{ display: "block", margin: "0 auto" }}
             />
+
             <SocialContainer>
               <AnchorLinkIcon
                 target="_blank"
