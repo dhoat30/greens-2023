@@ -73,11 +73,11 @@ const IndianFooter = ({ contactData }) => {
                 <span>{urlData[0].phone}</span>
               </Anchor>
 
-              <Anchor href={`mailto: ${urlData[0].email}`} targetBlank="_blank">
+              <Anchor href={`mailto: ${urlData[0].email}`} targetblank="_blank">
                 <Email />
                 <span>{urlData[0].email}</span>
               </Anchor>
-              <Anchor href={`${urlData[0].streetAddress}`} targetBlank="_blank">
+              <Anchor href={`${urlData[0].streetAddress}`} targetblank="_blank">
                 <Map />
                 <span>
                   {urlData[0].streetAddress}{" "}

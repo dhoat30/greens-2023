@@ -78,7 +78,7 @@ const Footer = ({ contactData }) => {
 
               <Anchor
                 href={`mailto: ${urlData[0].email}`}
-                targetBlank="_blank"
+                targetblank="_blank"
               >
                 <Email />
                 <span>
@@ -86,10 +86,10 @@ const Footer = ({ contactData }) => {
                 </span>
 
               </Anchor>
-              <Anchor href={`${urlData[0].streetAddress}`} targetBlank="_blank">
+              <Anchor href={`${urlData[0].streetAddress}`} targetblank="_blank">
                 <Map />
                 <span>
-                  {urlData[0].streetAddress}{" "}
+                  {urlData[0].streetAddress}
                   <SecondText>{urlData[0].region}</SecondText>
                 </span>
               </Anchor>

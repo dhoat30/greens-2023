@@ -9,7 +9,7 @@ function Menu(props) {
     })
     return (
 
-        <Container flexRow={props.flexRow} mobileMenu={props.mobileMenu}>
+        <Container flexrow={props.flexrow} mobileMenu={props.mobileMenu}>
             {/* if home is true add a home link */}
             {props.home ? <MenuItem menuSlug="/" closeClick={props.closeClick}>Home</MenuItem> : null}
             {/* if order online exist add it to navbar */}
@@ -29,7 +29,7 @@ function Menu(props) {
 const Container = styled.ul`
     display: flex;
     justify-content: space-between;
-    flex-direction: ${props => props.flexRow ? "row" : "column"};
+    flex-direction: ${props => props.flexrow ? "row" : "column"};
     position: ${props => props.mobileMenu ? "absolute" : "static"};
     top: 50px; 
     right: 0;

@@ -11,8 +11,8 @@ function MenuLink(props) {
                 {/* <FontAwesomeIconStyle onClick={props.closeClick} icon={faTimes} /> */}
                 <Logo width="200px " mobileWidth="200px" />
                 <LinkContainer>
-                    <AnchorLink margin="0 5px" targetBlank={true} link={props.takeawayLink}>{props.takeAwayTitle}</AnchorLink>
-                    <AnchorLink margin="0 5px" targetBlank={true} background={true} link={props.dineInLink}>{props.dineInTitle}</AnchorLink>
+                    <AnchorLink margin="0 5px" targetblank={true} link={props.takeawayLink}>{props.takeAwayTitle}</AnchorLink>
+                    <AnchorLink margin="0 5px" targetblank={true} background={true} link={props.dineInLink}>{props.dineInTitle}</AnchorLink>
                 </LinkContainer>
             </TakeAwayMenuContainer>
         </React.Fragment>

@@ -17,8 +17,8 @@ function Hero({ title, subtitle, orderOnlineLink, bookTable, desktopImage, mobil
                     {buttons ?
                         null :
                         <ButtonsContainer>
-                            <AnchorLink link={orderOnlineLink} background={true} targetBlank={true}> Order Online </AnchorLink>
-                            <AnchorLink link={bookTable}  showIcon={false}>Book a table</AnchorLink>
+                            <AnchorLink link={orderOnlineLink} background={true} targetblank={true}> Order Online </AnchorLink>
+                            <AnchorLink link={bookTable} showIcon={false}>Book a table</AnchorLink>
                         </ButtonsContainer>
 
                     }

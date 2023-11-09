@@ -3,7 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 function Loader(props) {
   return (
-    // "fa-spin" 
+
     <Container center={props.alignCenter} className="lds-ripple"><div></div><div></div></Container>
   )
 }
@@ -17,7 +17,7 @@ const Container = styled.div`
     height: 10px;
     z-index: 10; 
    margin: 0 auto; 
-  }
+  
    div {
     position: absolute;
     border: 4px solid var(--green);
@@ -57,6 +57,6 @@ const Container = styled.div`
       height: 72px;
       opacity: 0;
     }
-  
+  }
 `
 export default Loader

@@ -1,7 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import SectionTitle from '../../UI/Titles/SectionTitle'
 import MenuCard from './MenuCard'
 
 
@@ -23,7 +22,7 @@ function MenuPage({ menuData }) {
     return (
         <Container className="row-container">
 
-            <h1 class=" section-title-indian"> Select Menu</h1>
+            <h1 className=" section-title-indian"> Select Menu</h1>
             <Flex>
                 {
                     menuCard

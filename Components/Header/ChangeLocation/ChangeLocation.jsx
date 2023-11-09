@@ -49,7 +49,7 @@ function ChangeLocation({ variant, currentLocation }) {
       <div className="content-wrapper">
         <div className="title">Change Location</div>
 
-        <div class="dropdown-container">
+        <div className="dropdown-container">
           <div className="current-location" onClick={toggleDropdown}>
             {currentLocation}{" "}
             <DownIcon className={`${isDropdownVisible && "rotate-icon"}`} />

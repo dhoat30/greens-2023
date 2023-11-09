@@ -9,12 +9,12 @@ function MenuItem(props) {
         <li>
             {props.anchorTag ?
                 <AnchorStyle onClick={clickHandler} href={props.menuSlug}>{props.label}</AnchorStyle> :
-                <Link href={props.menuSlug} passHref legacyBehavior><LinkStyle onClick={clickHandler} activeStyle={activeStyle}>{props.children}</LinkStyle></Link>
+                <Link href={props.menuSlug} passHref legacyBehavior><LinkStyle onClick={clickHandler} activestyle={activestyle}>{props.children}</LinkStyle></Link>
             }
         </li>
     )
 }
-const activeStyle = {
+const activestyle = {
     color: 'var(--darkGreen)'
 }
 const AnchorStyle = styled.a`

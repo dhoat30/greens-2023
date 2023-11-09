@@ -6,7 +6,6 @@ import axios from 'axios'
 import Loader from '../../../../UI/Loader/Loader'
 
 function Form({ emailTo, formName }) {
-
     // states
     const [enteredName, setEnteredName] = useState('')
     const [enteredNameTouched, setEnteredNameTouched] = useState(false)
@@ -66,6 +65,10 @@ function Form({ emailTo, formName }) {
 
     const formSubmissionHandler = (event) => {
         event.preventDefault()
+
+
+
+        event.preventDefault()
         setEnteredNameTouched(true)
         setEnteredEmailTouched(true)
         setEnteredPhoneTouched(true)
@@ -81,9 +84,10 @@ function Form({ emailTo, formName }) {
                 email: enteredEmail,
                 phone: enteredPhone,
                 message: enteredMessage,
-                emailTo: emailTo,
+                emailTo: "designer@webduel.co.nz",
                 formName: formName
             }).then(res => {
+                console.log(res)
                 if (res.data.data === 200) {
                     setFormSubmitted(true)
                     setEnteredName("")
@@ -158,6 +162,7 @@ function Form({ emailTo, formName }) {
 
 
                 </InputContainer>
+
                 {showLoader ? <Loader alignCenter={true} /> : <ButtonStyle>Send</ButtonStyle>}
 
 

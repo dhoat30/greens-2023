@@ -29,7 +29,7 @@ function Navbar(props) {
     <React.Fragment>
       <DesktopContainer>
 
-        <Menu flexRow={true}
+        <Menu flexrow={true}
           menuArray={props.firstMenuArray}
           home={false}
           closeClick={closeClickHandler}
@@ -43,7 +43,7 @@ function Navbar(props) {
           closeClick={closeClickHandler}
           orderOnline={props.orderOnline}
           mobileMenu={true}
-          flexRow={false}
+          flexrow={false}
           menuArray={props.firstMenuArray}
           home={false} /> : null}
       </MobileContainer>

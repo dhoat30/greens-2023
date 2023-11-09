@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import Link from 'next/link'
 function AnchorLink(props) {
-    const targetBlank = props.targetBlank ? "_blank" : null
+    const targetblank = props.targetblank ? "_blank" : null
 
     return (
         <React.Fragment>
@@ -14,7 +14,7 @@ function AnchorLink(props) {
                         background={props.background}
                         className={props.className}
                         margin={props.margin}
-                        target={targetBlank}>{props.children}</Container>
+                        target={targetblank}>{props.children}</Container>
                 </Link>
             }
         </React.Fragment>

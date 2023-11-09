@@ -4,7 +4,7 @@ import AnchorLink from '../AnchorLink/AnchorLink'
 function MobileFixedButtons(props) {
     return (
         <Container className={props.className}>
-            <AnchorLinkStyle icon="false" link={props.orderOnlineLink} background={true} targetBlank={true}> Order Online </AnchorLinkStyle>
+            <AnchorLinkStyle icon="false" link={props.orderOnlineLink} background={true} targetblank={true}> Order Online </AnchorLinkStyle>
             <AnchorBackground icon="false" link={`tel: ${props.phoneNumber}`} background={true}> Call Us </AnchorBackground>
 
         </Container >
