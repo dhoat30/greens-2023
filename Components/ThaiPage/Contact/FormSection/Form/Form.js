@@ -74,15 +74,17 @@ function Form({ emailTo, formName }) {
             return
         }
         setShowLoader(true)
-
+        const body = {
+            name: enteredName,
+            email: enteredEmail,
+            phone: enteredPhone,
+            message: enteredMessage,
+            emailTo: "dhoat30@gmail.com",
+            formName: formName
+        }
         axios.post('/api/contact-form',
             {
-                name: enteredName,
-                email: enteredEmail,
-                phone: enteredPhone,
-                message: enteredMessage,
-                emailTo: emailTo,
-                formName: formName
+                body
             }).then(res => {
                 if (res.data.data === 200) {
                     setFormSubmitted(true)

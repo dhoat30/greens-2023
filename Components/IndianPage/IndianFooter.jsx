@@ -89,7 +89,12 @@ const IndianFooter = ({ contactData }) => {
 
           <LogoContainer>
             <div className="logo-wrapper">
-              <Image src={urlData[0].logo.url} width="153" height="52" />
+              <Image
+                src={urlData[0].logo.url}
+                width="153"
+                height="52"
+                alt="Logo"
+              />
             </div>
 
             <SocialContainer>

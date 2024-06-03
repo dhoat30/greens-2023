@@ -77,34 +77,33 @@ function Form({ emailTo, formName }) {
             return
         }
         setShowLoader(true)
-
-        axios.post('/api/contact-form',
-            {
-                name: enteredName,
-                email: enteredEmail,
-                phone: enteredPhone,
-                message: enteredMessage,
-                emailTo: "designer@webduel.co.nz",
-                formName: formName
-            }).then(res => {
-                console.log(res)
-                if (res.data.data === 200) {
-                    setFormSubmitted(true)
-                    setEnteredName("")
-                    setEnteredEmail("")
-                    setEnteredPhone("")
-                    setEnteredMessage("")
-                    setEnteredNameTouched(false)
-                    setEnteredEmailTouched(false)
-                    setEnteredPhoneTouched(false)
-                    setShowLoader(false)
-                }
-
-
-            }).catch(err => {
-                console.log(err)
+        const body = {
+            name: enteredName,
+            email: enteredEmail,
+            phone: enteredPhone,
+            message: enteredMessage,
+            emailTo: "dhoat30@gmail.com",
+            formName: formName
+        }
+        axios.post('/api/contact-form', { body }).then(res => {
+            console.log(res)
+            if (res.data.data === 200) {
+                setFormSubmitted(true)
+                setEnteredName("")
+                setEnteredEmail("")
+                setEnteredPhone("")
+                setEnteredMessage("")
+                setEnteredNameTouched(false)
+                setEnteredEmailTouched(false)
+                setEnteredPhoneTouched(false)
                 setShowLoader(false)
-            })
+            }
+
+
+        }).catch(err => {
+            console.log(err)
+            setShowLoader(false)
+        })
 
     }
 

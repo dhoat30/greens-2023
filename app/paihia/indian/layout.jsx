@@ -2,6 +2,9 @@ import { Poppins } from "next/font/google";
 
 import IndianHeader from "@/Components/IndianPage/IndianHeader";
 import IndianFooter from "@/Components/IndianPage/IndianFooter";
+import Script from "next/script";
+import Head from "next/head";
+
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800", "900"],

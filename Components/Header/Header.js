@@ -14,7 +14,6 @@ import ChangeLocation from './ChangeLocation/ChangeLocation'
 
 function Header({ contactData }) {
   const pathname = usePathname()
-
   const searchTerm = pathname;
   const [location, cuisine] = searchTerm.split('/').slice(1); // Extract "paihia" and "thai"
   const currentLocation = `${cuisine} ${location}`;

@@ -4,8 +4,10 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import PrimaryButton from "../UI/Button/PrimaryButton";
 import EntryPagePopUp from "./EntryPagePopUp";
+import { useRouter } from "next/navigation";
 
 function EntryPage() {
+  const router = useRouter();
   const [firstBtnClicked, setFirstBtnClicked] = useState(false);
   const [secondBtnClicked, setSecondBtnClicked] = useState(false);
   const [isPopUpVisible, setPopUpVisible] = useState(false);
@@ -15,11 +17,17 @@ function EntryPage() {
     setFirstBtnClicked(false);
     setSecondBtnClicked(false);
   };
+
   const firstBtnClickHandler = () => {
     setFirstBtnClicked(true);
   };
+
   const secondBtnClickHandler = () => {
     setSecondBtnClicked(true);
+  };
+
+  const thirdBtnClickHandler = () => {
+    router.push("/kerikeri/thai");
   };
 
   return (
@@ -61,7 +69,9 @@ function EntryPage() {
                 className="logo"
                 alt="Greens Logo"
                 src="/greenlogo.png"
+                sizes="(max-width: 1000px) 100vw, 50vw"
                 fill
+                priority
               ></Image>
             </div>
 
@@ -81,6 +91,14 @@ function EntryPage() {
               >
                 Green&apos;s Russell
               </PrimaryButton>
+              <PrimaryButton
+                className={"wide-button"}
+                background="true"
+                variant="thai"
+                onClick={thirdBtnClickHandler}
+              >
+                Greens Kerikeri
+              </PrimaryButton>
             </div>
           </div>
           <div className="hero-image-wrapper">
@@ -88,6 +106,8 @@ function EntryPage() {
               src="/entry-page-hero.png"
               alt="Entry page hero image"
               fill
+              priority
+              sizes="(max-width: 1000px) 100vw, 50vw"
             />
           </div>
         </div>
@@ -145,13 +165,17 @@ const Container = styled.div`
     }
     .button-wrapper {
       margin-top: 16px;
-      display: flex;
+      display: grid;
       gap: 16px;
+      grid-template-columns: repeat(2, 1fr);
       @media (max-width: 500px) {
         flex-direction: column;
       }
       button {
         width: 100%;
+      }
+      .wide-button {
+        grid-column: 1/3;
       }
     }
   }

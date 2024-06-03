@@ -1,5 +1,7 @@
 import HomePage from "@/Components/IndianPage/HomePage/HomePage";
 import React from "react";
+import Script from "next/script";
+import Head from "next/head";
 
 async function page() {
   // slider data

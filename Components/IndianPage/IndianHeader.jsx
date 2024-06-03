@@ -7,10 +7,13 @@ import Link from "next/link";
 import Navbar from "../Header/Navbar/Navbar";
 import PrimaryButton from "../UI/Button/PrimaryButton";
 import ChangeLocation from "../Header/ChangeLocation/ChangeLocation";
+import Head from "next/head";
+import Script from "next/script";
 
 function IndianHeader({ contactData }) {
   // get current url
   const pathname = usePathname();
+  console.log(pathname);
   // split url into array
   const [location, cuisine] = pathname.split("/").slice(1); // Extract "paihia" and "thai"
   // get root url to use for logo link
@@ -47,6 +50,11 @@ function IndianHeader({ contactData }) {
   ];
   return (
     <>
+      {/* {pathname === "/paihia/indian" && (
+        <Head>
+          <title>My page title</title>
+        </Head>
+      )} */}
       <ChangeLocation variant="indian" currentLocation={currentLocation} />
       <HeaderContainer>
         <DesktopNavbar className="row-container">

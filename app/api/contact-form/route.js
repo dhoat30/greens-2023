@@ -2,8 +2,7 @@ import { NextResponse } from 'next/server'
 
 export async function POST(req, res) {
     const { body } = await req.json();
-    console.log("api call")
-    console.log(body)
+
 
     // hubspot request options
     var postOptions = {
@@ -11,7 +10,7 @@ export async function POST(req, res) {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: body,
+        body: JSON.stringify(body),
     };
 
 
@@ -36,3 +35,4 @@ export async function GET(req, res) {
     return NextResponse.json(res)
 
 };
+
