@@ -1,29 +1,24 @@
 'use client'
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { SRLWrapper } from "simple-react-lightbox";
 import Image from 'next/image'
 
 function Gallery(props) {
-
     const gallery = props.galleryData.acf.gallery.map(item => {
         return (
             <ImgWrapper key={item.ID}>
                 <ImageStyle className="gallery-image-wrapper" src={item.url} alt={item.title} fill></ImageStyle>
             </ImgWrapper>
         )
-
     })
     return (
         <Container>
-            <SRLWrapper>
-                <GalleryWrapper>
+            <GalleryWrapper>
 
-                    {gallery}
+                {gallery}
 
-                </GalleryWrapper>
+            </GalleryWrapper>
 
-            </SRLWrapper>
         </Container>
     )
 }
