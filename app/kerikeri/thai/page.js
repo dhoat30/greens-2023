@@ -1,5 +1,5 @@
 import React from "react";
-import Home from "@/Components/ThaiPage/Home/Home";
+
 async function page() {
 
     return (
