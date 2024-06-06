@@ -14,7 +14,10 @@ async function page() {
     );
   }
 
-  return <AboutPage aboutPageData={aboutPageData} />;
+  // return <AboutPage aboutPageData={aboutPageData} />;
+  return (
+    <h1 style={{ textAlign: "center", padding: "80px 0" }}>Coming soon</h1>
+  );
 }
 
 export default page;
