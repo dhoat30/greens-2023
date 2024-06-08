@@ -1,5 +1,6 @@
 import React from "react";
 import Home from "@/Components/ThaiPage/Home/Home";
+import Image from "next/image";
 async function page() {
     // slider data
     const response = await fetch(`${process.env.url}/wp-json/wp/v2/slider`, {
@@ -90,18 +91,21 @@ async function page() {
     );
 
     return (
-        <Home
-            sliderData={sliderData}
-            sloganData={sloganData[0]}
-            favouriteMenuData={favouriteMenuData}
-            menuImagesData={menuImagesData}
-            uspData={uspData}
-            bannerData={bannerData[0]}
-            testimonialData={testimonialData}
-            chefData={chefData[0]}
-            galleryData={galleryData[0]}
-            contactInfoData={contactInfo[0]}
-        />
+        <div style={{ position: "relative", paddingBottom: "56%" }}>
+            <Image src="/kerikeri-coming-soon.jpg" alt="coming soon banner" fill style={{ objectFit: "cover" }} />
+        </div>
+        // <Home
+        //     sliderData={sliderData}
+        //     sloganData={sloganData[0]}
+        //     favouriteMenuData={favouriteMenuData}
+        //     menuImagesData={menuImagesData}
+        //     uspData={uspData}
+        //     bannerData={bannerData[0]}
+        //     testimonialData={testimonialData}
+        //     chefData={chefData[0]}
+        //     galleryData={galleryData[0]}
+        //     contactInfoData={contactInfo[0]}
+        // />
     );
 }
 

@@ -28,10 +28,10 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className={poppins.className}>
-        <Header contactData={contactInfo} />
+      <body className={poppins.className} style={{ background: "#00511e" }}>
+        {/* <Header contactData={contactInfo} /> */}
         {children}
-        <Footer contactData={contactInfo} />
+        {/* <Footer contactData={contactInfo} /> */}
       </body>
     </html>
   );
