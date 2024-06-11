@@ -23,7 +23,7 @@ export default function ComingSoon() {
           style={{ position: "relative", paddingBottom: "100%" }}
         >
           <Image
-            src="/kerikeri-coming-soon/IMG_2575.jpg"
+            src="/comingSoon/IMG_2575-min.JPG"
             alt="coming soon banner"
             fill
             style={{ objectFit: "cover" }}
@@ -36,7 +36,7 @@ export default function ComingSoon() {
           style={{ position: "relative", paddingBottom: "100%" }}
         >
           <Image
-            src="/kerikeri-coming-soon/IMG_2573.jpg"
+            src="/comingSoon/IMG_2573-min.JPG"
             alt="coming soon banner"
             fill
             style={{ objectFit: "cover" }}
@@ -49,7 +49,7 @@ export default function ComingSoon() {
           style={{ position: "relative", paddingBottom: "100%" }}
         >
           <Image
-            src="/kerikeri-coming-soon/IMG_2576.jpg"
+            src="/comingSoon/IMG_2576-min.JPG"
             alt="coming soon banner"
             fill
             style={{ objectFit: "cover" }}
