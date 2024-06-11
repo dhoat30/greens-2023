@@ -1,6 +1,7 @@
 import React from "react";
 import Home from "@/Components/ThaiPage/Home/Home";
 import Image from "next/image";
+import ComingSoon from "@/Components/ComingSoon/ComingSoon";
 async function page() {
     // slider data
     const response = await fetch(`${process.env.url}/wp-json/wp/v2/slider`, {
@@ -91,9 +92,7 @@ async function page() {
     );
 
     return (
-        <div style={{ position: "relative", paddingBottom: "56%" }}>
-            <Image src="/kerikeri-coming-soon.jpg" alt="coming soon banner" fill style={{ objectFit: "cover" }} />
-        </div>
+        <ComingSoon />
         // <Home
         //     sliderData={sliderData}
         //     sloganData={sloganData[0]}

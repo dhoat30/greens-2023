@@ -20,6 +20,10 @@ const changeLocationArr = [
     label: `Indian Russell`,
     url: `/russell/indian`,
   },
+  {
+    label: `Thai Kerikeri`,
+    url: `/kerikeri/thai`,
+  },
 ];
 
 function ChangeLocation({ variant, currentLocation }) {
