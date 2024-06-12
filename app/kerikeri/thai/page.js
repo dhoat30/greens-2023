@@ -92,19 +92,19 @@ async function page() {
     );
 
     return (
-        <ComingSoon />
-        // <Home
-        //     sliderData={sliderData}
-        //     sloganData={sloganData[0]}
-        //     favouriteMenuData={favouriteMenuData}
-        //     menuImagesData={menuImagesData}
-        //     uspData={uspData}
-        //     bannerData={bannerData[0]}
-        //     testimonialData={testimonialData}
-        //     chefData={chefData[0]}
-        //     galleryData={galleryData[0]}
-        //     contactInfoData={contactInfo[0]}
-        // />
+        // <ComingSoon />
+        <Home
+            sliderData={sliderData}
+            sloganData={sloganData[0]}
+            favouriteMenuData={favouriteMenuData}
+            menuImagesData={menuImagesData}
+            uspData={uspData}
+            bannerData={bannerData[0]}
+            testimonialData={testimonialData}
+            chefData={chefData[0]}
+            galleryData={galleryData[0]}
+            contactInfoData={contactInfo[0]}
+        />
     );
 }
 
