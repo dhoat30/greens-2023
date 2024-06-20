@@ -79,7 +79,7 @@ async function page() {
     let galleryData;
     if (indianGallery.length > 0) {
         galleryData = indianGallery.filter((item) =>
-            item.title.rendered.includes("Thai Paihia")
+            item.title.rendered.includes("Kerikeri Thai")
         );
     }
 
