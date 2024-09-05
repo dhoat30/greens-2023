@@ -82,7 +82,7 @@ function Form({ emailTo, formName }) {
             email: enteredEmail,
             phone: enteredPhone,
             message: enteredMessage,
-            emailTo: "dhoat30@gmail.com",
+            emailTo: "info@greensnz.com",
             formName: formName
         }
         axios.post('/api/contact-form', { body }).then(res => {
