@@ -3,11 +3,11 @@ import Image from 'next/image'
 import styled from 'styled-components'
 
 
-function Logo({ className, logoData, contWidth }) {
+function Logo({ className, logoData, contwidth }) {
 
 
     return (
-        <Container className={className} contWidth={contWidth}>
+        <Container className={className} contwidth={contwidth}>
             <ImageStyle
                 src={logoData.url}
                 fill

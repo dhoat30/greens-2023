@@ -92,7 +92,7 @@ function Header({ contactData }) {
         <DesktopNavbar className="row-container">
           <Navbar firstMenuArray={firstPartMenu} />
           <Link href={menuArray[0].url} passHref legacyBehavior>
-            <LinkStyle><Logo logoData={urlData[0].logo} header={true} contWidth="150px" /></LinkStyle>
+            <LinkStyle><Logo logoData={urlData[0].logo} header={true} contwidth="150px" /></LinkStyle>
           </Link>
           <Navbar firstMenuArray={secondPartMenu} />
         </DesktopNavbar>
@@ -101,7 +101,7 @@ function Header({ contactData }) {
 
           <Navbar firstMenuArray={mobileMenuArrayData} />
           <Link href={menuArray[0].url} passHref legacyBehavior>
-            <LinkStyle><Logo logoData={urlData[0].logo} header={true} contWidth="100px" /></LinkStyle>
+            <LinkStyle><Logo logoData={urlData[0].logo} header={true} contwidth="100px" /></LinkStyle>
           </Link>
         </MobileNavbar>
       </Container>

@@ -6,6 +6,10 @@ import axios from 'axios'
 import Loader from '../../../../UI/Loader/Loader'
 
 function Form({ emailTo, formName }) {
+    // console.log("emailto")
+    // console.log(emailTo)
+    // console.log(formName)
+
 
     // states
     const [enteredName, setEnteredName] = useState('')
@@ -79,7 +83,7 @@ function Form({ emailTo, formName }) {
             email: enteredEmail,
             phone: enteredPhone,
             message: enteredMessage,
-            emailTo: "info@greensnz.com",
+            emailTo: emailTo,
             formName: formName
         }
         axios.post('/api/contact-form',

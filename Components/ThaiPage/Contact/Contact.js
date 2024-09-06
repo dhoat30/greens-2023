@@ -7,7 +7,7 @@ function Contact({ contactInfoData }) {
     return (
         <Container>
             <Flex className="row-container">
-                <IFrameStyle src={contactInfoData.acf.google_map_url} style={{ border: '0' }} allowfullscreen="" loading="lazy"></IFrameStyle>
+                <IFrameStyle src={contactInfoData.acf.google_map_url} style={{ border: '0' }} loading="lazy"></IFrameStyle>
                 <FormSection
                     formName={contactInfoData.acf.contact_form_name}
                     emailTo={contactInfoData.acf.booking_form_email} />
