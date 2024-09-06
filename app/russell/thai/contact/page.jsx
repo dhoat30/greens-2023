@@ -6,7 +6,7 @@ async function page() {
   });
   let contactInfo = await contactInfoData.json();
   contactInfo = contactInfo.filter(
-    (item) => item.slug === "greens-indian-russell"
+    (item) => item.slug === "greens-thai-russell"
   );
   return <Contact contactInfoData={contactInfo[0]} />;
 }
