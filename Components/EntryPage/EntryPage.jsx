@@ -19,11 +19,15 @@ function EntryPage() {
   };
 
   const firstBtnClickHandler = () => {
-    setFirstBtnClicked(true);
+    router.push("/paihia/thai");
+
+    // setFirstBtnClicked(true);
   };
 
   const secondBtnClickHandler = () => {
-    setSecondBtnClicked(true);
+    router.push("/russell/thai");
+
+    // setSecondBtnClicked(true);
   };
 
   const thirdBtnClickHandler = () => {

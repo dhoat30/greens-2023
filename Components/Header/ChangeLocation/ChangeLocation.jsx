@@ -5,21 +5,15 @@ import { useRouter } from "next/navigation";
 
 const changeLocationArr = [
   {
-    label: `Thai Paihia`,
+    label: `Paihia`,
     url: `/paihia/thai`,
   },
+ 
   {
-    label: `Indian Paihia`,
-    url: `/paihia/indian`,
-  },
-  {
-    label: `Thai Russell`,
+    label: `Russell`,
     url: `/russell/thai`,
   },
-  {
-    label: `Indian Russell`,
-    url: `/russell/indian`,
-  },
+
   {
     label: `Thai Kerikeri`,
     url: `/kerikeri/thai`,
