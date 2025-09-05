@@ -7,7 +7,7 @@ import MenuCard from './MenuCard'
 
 
 function MenuPage({ menuData }) {
-
+console.log(menuData);
     const menuCard = menuData.map(item => {
         return (
             <React.Fragment key={item.id}>

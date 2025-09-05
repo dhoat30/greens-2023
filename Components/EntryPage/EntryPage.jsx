@@ -19,9 +19,8 @@ function EntryPage() {
   };
 
   const firstBtnClickHandler = () => {
-    router.push("/paihia/thai");
 
-    // setFirstBtnClicked(true);
+    setFirstBtnClicked(true);
   };
 
   const secondBtnClickHandler = () => {
