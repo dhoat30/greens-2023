@@ -81,6 +81,16 @@ const nextConfig = {
                 destination: '/paihia/indian/menu',
                 permanent: true,
             },
+            {
+                source: '/paihia/indian',
+                destination: '/paihia/thai',
+                permanent: true,
+            },
+            {
+                source: '/russell/indian',
+                destination: '/russell/thai',
+                permanent: true,
+            },
         ]
     }
 }
