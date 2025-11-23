@@ -9,9 +9,9 @@ function AnchorLink(props) {
         <React.Fragment>
             {
                 props.link &&
-                <Link href={props.link} passHref legacyBehavior>
+                <Link href={props.link}  >
                     <Container onClick={props.buttonClick}
-                        background={props.background}
+                        $background={props.background}
                         className={props.className}
                         margin={props.margin}
                         target={targetblank}>{props.children}</Container>
@@ -22,7 +22,7 @@ function AnchorLink(props) {
 
     )
 }
-const Container = styled.a`
+const Container = styled.span`
     display: inline-block;
     text-align: center;
     text-decoration: none; 
@@ -35,12 +35,12 @@ const Container = styled.a`
     margin:${props => props.margin};
     text-transform: uppercase;
     cursor: pointer;
-    background: ${props => props.background && "var(--green)"}; 
-    color: ${props => props.background ? "white" : "var(--green)"};
+    background: ${props => props.$background && "var(--green)"}; 
+    color: ${props => props.$background ? "white" : "var(--green)"};
 
     &:hover{
-        background: ${props => !props.background ? "var(--green)" : "none"};
-        color: ${props => !props.background ? "white" : "var(--green)"};
+        background: ${props => !props.$background ? "var(--green)" : "none"};
+        color: ${props => !props.$background ? "white" : "var(--green)"};
         border: 2px solid var(--green);
         text-decoration: none;
 }

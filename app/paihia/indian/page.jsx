@@ -2,6 +2,7 @@ import HomePage from "@/Components/IndianPage/HomePage/HomePage";
 import React from "react";
 import Script from "next/script";
 import Head from "next/head";
+import PaihiaIndianRedirectionPage from "@/Components/PaihiaIndianRedirectionPage/PaihiaIndianRedirectionPage";
 
 async function page() {
   // slider data
@@ -61,14 +62,7 @@ async function page() {
   const brandsData = await pages.json();
   return (
     <>
-      <HomePage
-        sliderData={sliderData}
-        favouriteMenuData={favouriteMenuData}
-        contactInfoData={contactInfo[0]}
-        testimonialData={testimonialData}
-        galleryData={galleryData[0]}
-        brandsData={brandsData[0]}
-      />
+  <PaihiaIndianRedirectionPage/> 
     </>
   );
 }

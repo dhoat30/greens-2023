@@ -91,7 +91,7 @@ function Header({ contactData }) {
       <Container className='header'>
         <DesktopNavbar className="row-container">
           <Navbar firstMenuArray={firstPartMenu} />
-          <Link href={menuArray[0].url} passHref legacyBehavior>
+          <Link href={menuArray[0].url}  >
             <LinkStyle><Logo logoData={urlData[0].logo} header={true} contwidth="150px" /></LinkStyle>
           </Link>
           <Navbar firstMenuArray={secondPartMenu} />
@@ -100,7 +100,7 @@ function Header({ contactData }) {
         <MobileNavbar className="row-container">
 
           <Navbar firstMenuArray={mobileMenuArrayData} />
-          <Link href={menuArray[0].url} passHref legacyBehavior>
+          <Link href={menuArray[0].url}  >
             <LinkStyle><Logo logoData={urlData[0].logo} header={true} contwidth="100px" /></LinkStyle>
           </Link>
         </MobileNavbar>
@@ -126,7 +126,7 @@ const AnchorLinkStyle = styled(AnchorLink)`
     display: none;
 }
 `
-const LinkStyle = styled.a`
+const LinkStyle = styled.span`
 margin: 0 30px;
 @media (max-width: 1000px){
    margin: 0;

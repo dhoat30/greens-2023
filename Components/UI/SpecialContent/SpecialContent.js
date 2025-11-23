@@ -11,7 +11,7 @@ function SpecialContent(props) {
             <DishesContainer className="row-container">
                 <Content>
                     {props.content}
-                    {props.link ? <Link href={props.link} passHref legacyBehavior>
+                    {props.link ? <Link href={props.link}  >
                         <LinkStyle >View Menu</LinkStyle>
                     </Link> : null}
                 </Content>
@@ -81,7 +81,7 @@ height: 500px;
 }
 `
 
-const LinkStyle = styled.a`
+const LinkStyle = styled.span`
 color: var(--darkGrey);
  font-weight: 300;
  font-size: 1.2rem;

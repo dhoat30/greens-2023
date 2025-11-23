@@ -9,7 +9,7 @@ function MenuItem(props) {
         <li>
             {props.anchorTag ?
                 <AnchorStyle onClick={clickHandler} href={props.menuSlug}>{props.label}</AnchorStyle> :
-                <Link href={props.menuSlug} passHref legacyBehavior><LinkStyle onClick={clickHandler} activestyle={activestyle}>{props.children}</LinkStyle></Link>
+                <Link href={props.menuSlug}  ><LinkStyle onClick={clickHandler} activestyle={activestyle}>{props.children}</LinkStyle></Link>
             }
         </li>
     )
@@ -29,7 +29,7 @@ color: var(--green);
     
    }
 `
-const LinkStyle = styled.a`
+const LinkStyle = styled.span`
     text-decoration: none;
 color: var(--green); 
     margin: 0 20px; 

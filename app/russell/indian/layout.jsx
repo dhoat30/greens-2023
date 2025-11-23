@@ -29,12 +29,10 @@ export default async function RootLayout({ children }) {
   );
   let contactInfo = await contactInfoData.json();
   return (
-    <html lang="en">
-      <body className={poppins.className}>
+<>
         <IndianHeader contactData={contactInfo[0]} />
         {children}
         <IndianFooter contactData={contactInfo[0]} />
-      </body>
-    </html>
+     </>
   );
 }

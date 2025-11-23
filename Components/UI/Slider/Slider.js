@@ -7,14 +7,14 @@ import Link from 'next/link'
 function Slider({ sliderImages }) {
     const slide = sliderImages.reverse().map((item, index) => {
         return <Carousel.Item key={index}>
-            <Link href={item.link} passHref legacyBehavior>
-                <a>
+            <Link href={item.link}  >
+                <span>
                     <ImageStyle
                         className="d-block w-100"
                         src={item.desktopImage}
                         alt="First slide"
                     />
-                </a>
+                </span>
             </Link>
         </Carousel.Item>
     })

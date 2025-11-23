@@ -30,12 +30,18 @@ export default async function RootLayout({ children }) {
       <head>
         {/* google tag  */}
 
-        <Script id="google-analytics-tag" strategy="afterInteractive">
-          {`(window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XKMM7NJFPH');)`}
-        </Script>
+        <Script
+  id="google-analytics-tag"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XKMM7NJFPH');
+    `,
+  }}
+/>
       </head>
       <body className={poppins.className}>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>

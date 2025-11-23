@@ -26,12 +26,10 @@ export default async function RootLayout({ children }) {
   let contactInfo = await contactInfoData.json();
 
   return (
-    <html lang="en">
-      <body className={poppins.className}>
+    <>
         <Header contactData={contactInfo} />
         {children}
         <Footer contactData={contactInfo} />
-      </body>
-    </html>
+      </>
   );
 }

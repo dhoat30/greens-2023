@@ -5,7 +5,7 @@ function LinkItem({ name, link }) {
 
     return (
         <li>
-            <Link href={link} passHref legacyBehavior>
+            <Link href={link}  >
                 <Anchor>
                     {name}
                 </Anchor>
@@ -16,7 +16,7 @@ function LinkItem({ name, link }) {
 
 export default LinkItem
 
-const Anchor = styled.a`
+const Anchor = styled.span`
     font-size: var(--paragraphSize); 
     color: var(--fontGrey);
     &:hover{ 
